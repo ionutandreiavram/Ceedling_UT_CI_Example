@@ -12,7 +12,7 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/${{ github.repository | toLowerCase }}/my-project-image:latest
+      image: ghcr.io/${{ github.repository }}/my-project-image:latest
     
     steps:
     - name: Checkout code
