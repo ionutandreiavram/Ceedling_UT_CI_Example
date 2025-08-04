@@ -16,13 +16,18 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
+    - name: Clean previous outputs if any
+      run: |                                 
+        rm -rf build
+        rm -rf build_test_output
+
     - name: Run tests inside Docker container
       run: |
         docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
-        docker run --rm -v "$(pwd):/app" -v "$(pwd)/build/reports:/app/build/reports" ghcr.io/${{ github.repository }}/my-project-image:latest
+        docker run --rm -v "$(pwd):/app" -v "$(pwd)/build_test_output:/app/build_test_output" ghcr.io/${{ github.repository }}/my-project-image:latest
 
     - name: Upload reports as artifact
       uses: actions/upload-artifact@v4
       with:
         name: ceedling-reports
-        path: build/reports
+        path: build_test_output
