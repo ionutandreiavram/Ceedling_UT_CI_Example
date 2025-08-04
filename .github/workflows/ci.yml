@@ -19,4 +19,10 @@ jobs:
     - name: Run tests inside Docker container
       run: |
         docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
-        docker run --rm -v "$(pwd):/app" ghcr.io/${{ github.repository }}/my-project-image:latest sh -c "ls -R /app && ceedling test:all"
+        docker run --rm -v "$(pwd):/app" -v "$(pwd)/build/reports:/app/build/reports" ghcr.io/${{ github.repository }}/my-project-image:latest
+
+    - name: Upload reports as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ceedling-reports
+        path: build/reports
