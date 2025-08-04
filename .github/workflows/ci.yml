@@ -19,4 +19,4 @@ jobs:
     - name: Run tests inside Docker container
       run: |
         docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
-        docker run --rm -v "$(pwd):/app" ghcr.io/${{ github.repository }}/my-project-image:latest
+        docker run --rm -v "$(pwd):/app" ghcr.io/${{ github.repository }}/my-project-image:latest sh -c "ls -R /app && ceedling test:all"
