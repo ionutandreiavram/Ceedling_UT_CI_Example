@@ -1,17 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 #include "fibonacci.h"
 #include "concatenate.h"
 #include "calculator.h"
 #include "square_area.h"
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
 
 void main(void)
 {
 	int choose=0;
 	int buf;
-	printf("Choose what you need: \n")
+	printf("Choose what you need: \n");
 	printf("1 - Fibonacci \n 2- Concatenate Arrays \n 3 - Dummy Sqare Area \n");
 	printf("4 - Profi Sqare Area");
 	while ((scanf("%d", &choose)!=1) || (choose>4) || (choose<1)){
@@ -24,7 +24,7 @@ void main(void)
 		case FIBONACCI:
 			int fibonacci;
 			printf("Insert fibonacii number: \n");
-			while(((scanf("%d" &fibonacci)!=1)) || (fibonacci>80) || (fibonacci < 0)){
+			while(((scanf("%d", &fibonacci)!=1)) || (fibonacci>80) || (fibonacci < 0)){
 				printf("Invalid number!  \n");
 				while(fibonacci != '\n' && fibonacci != EOF){
 					buf = getchar();

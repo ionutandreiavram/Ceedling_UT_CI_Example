@@ -5,9 +5,9 @@
  * Demonstrates structs, pointers, and DP on 2D data.
  */
  
-#include "stdio.h"
-#include "stdint.h"
-#include "stdlib.h"
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
 #include "square_area.h"
 
 int min(int a, int b, int c){

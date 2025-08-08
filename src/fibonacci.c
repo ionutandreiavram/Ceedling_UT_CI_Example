@@ -1,7 +1,8 @@
 #ifndef FIBONACCI_H
 #define FIBONACCI_H
-#include "fibonacci.h"
 #include <stdint.h>
+#include <stdio.h>
+#include "fibonacci.h"
 
 uint32_t fibonacci_calculator(int n)
 {

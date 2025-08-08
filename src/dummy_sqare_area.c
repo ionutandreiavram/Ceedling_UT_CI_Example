@@ -9,12 +9,9 @@ Limited to 5x5 matrices and fixed input; no dynamic allocation or input validati
 Good for educational purposes, illustrating DP without complexity of memory management.
 */
 
-#include "stdlib.h"
-#include "stdio.h"
-
-int main(void);
-int min(int a, int b, int c);
-int return_sqare(int matrix[][5], int row, int col);
+#include <stdlib.h>
+#include <stdio.h>
+#include "dummy_square_area.h"
 
 int min(int a, int b, int c){
 	int min, temp;
@@ -51,8 +48,3 @@ int return_sqare_dummy(int matrix[][5], int row, int col){
 	return best_case;
 }
 
-	
-int main(void){
-
-	return 0;
-}
