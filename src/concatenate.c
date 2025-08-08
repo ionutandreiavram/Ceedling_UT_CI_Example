@@ -1,4 +1,6 @@
 #include <stdint.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 void Concatenate_arrays(uint8_t *input1_ptr, uint8_t *input2_ptr, uint16_t *output_ptr, int input1_size, int input2_size, int out_size)
 {
