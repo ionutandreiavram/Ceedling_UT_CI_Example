@@ -11,7 +11,7 @@ Good for educational purposes, illustrating DP without complexity of memory mana
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "dummy_square_area.h"
+#include "dummy_sqare_area.h"
 
 int min(int a, int b, int c){
 	int min, temp;
