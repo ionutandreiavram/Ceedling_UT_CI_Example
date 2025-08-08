@@ -13,7 +13,7 @@ Good for educational purposes, illustrating DP without complexity of memory mana
 #include <stdio.h>
 #include "dummy_sqare_area.h"
 
-int min(int a, int b, int c){
+int min_dummy(int a, int b, int c){
 	int min, temp;
 	temp = (a<b)?a:b;
 	min = (c<temp)?c:temp;
@@ -34,7 +34,7 @@ int return_sqare_dummy(int matrix[][5], int row, int col){
 					dp[i][j] = 1;
 				}
 				else{
-					dp[i][j] = 1 + min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]); 
+					dp[i][j] = 1 + min_dummy(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]); 
 				}
 			}
 			else{
