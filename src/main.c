@@ -5,6 +5,7 @@
 #include "concatenate.h"
 #include "calculator.h"
 #include "square_area.h"
+#include "dummy_sqare_area.h"
 #include "main.h"
 
 void main(void)
