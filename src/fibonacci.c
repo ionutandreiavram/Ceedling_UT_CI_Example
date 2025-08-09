@@ -4,11 +4,11 @@
 #include <stdio.h>
 #include "fibonacci.h"
 
-uint32_t fibonacci_calculator(int n)
+uint64_t fibonacci_calculator(int n)
 {
     if (0 >= n || 1 == n) return 0;
 
-    uint32_t a = 0, b = 1, c;
+    uint64_t a = 0, b = 1, c;
     for (int i = 2; i <= n; i++) {
         c = a + b;
         a = b;
